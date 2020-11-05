@@ -1,0 +1,15 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+
+<input type="text" name="name" [(ngModel)] = "companyName"/>
+<input type="submit" value="submit" (click)="addData(companyName)"/>
+
+<ul>
+	<div *ngFor="let data of obj">
+		<li>
+			{{data.Name}} <span style="color:red;cursor:pointer" (click)="removeData(data)">X</span>
+		</li>
+	</div>
+</ul>
